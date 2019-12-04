@@ -7,7 +7,7 @@ public class Employee {
 	
 	private String empid;
 	private String empname;
-	private String empname2;
+
 	private long empcontact;
 	private String empdob;
 	private String address;
