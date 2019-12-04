@@ -7,12 +7,14 @@ public class Employee {
 	
 	private String empid;
 	private String empname;
+	private String empname2;
 	private long empcontact;
 	private String empdob;
 	private String address;
 	private String username;
 	private String password;
 	private String empmail;
+	
 	private int empbranch;
 	public int getEmpbranch() {
 		return empbranch;
