@@ -28,10 +28,10 @@ private static Connection connection = null;
                 String user = "root";
                 String password = "1234";
                 Class.forName(driver);*/
-               String driver = prop.getProperty("driver");
-               String url = prop.getProperty("url");
-               String user = prop.getProperty("user");
-               String password = prop.getProperty("password");
+               String driver = "com.mysql.jdbc.Driver";
+               String url ="jdbc:mysql://localhost:3306/sapphirebank";
+               String user = "root";
+               String password ="1234";
                 connection = DriverManager.getConnection(url, user, password);
             } catch (SQLException e) {
                 e.printStackTrace();
