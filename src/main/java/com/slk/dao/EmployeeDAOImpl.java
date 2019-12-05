@@ -30,32 +30,6 @@ import com.slk.util.SDBUtil;
 				// TODO Auto-generated catch block
 				e2.printStackTrace();
 			}
-			employees = new ArrayList();
-			String query1="select * from agent";
-			Statement st1;
-			try {
-				st1 = con.createStatement();
-				ResultSet rs=st1.executeQuery(query1);
-				while(rs.next())
-				{
-					Employee e=new Employee();
-					 e.setEmpid(rs.getString(1));
-			         e.setEmpname(rs.getString(2));
-			         e.setAddress(rs.getString(3));
-			         e.setEmpdob(rs.getString(4));
-			        
-			         e.setEmpcontact(rs.getLong(5));
-			         e.setUsername(rs.getString(6));
-			         e.setPassword(rs.getString(7));
-			         e.setEmpmail(rs.getString(8));
-			         e.setEmpbranch_id(rs.getInt(9));
-				     employees.add(e);
-			} 
-			}catch (SQLException e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			}
-			
 			
 			
 		}
@@ -114,6 +88,33 @@ import com.slk.util.SDBUtil;
 		 * @return list of customers
 		 */
 		public List list() {
+			employees = new ArrayList();
+			String query1="select * from agent";
+			Statement st1;
+			try {
+				st1 = con.createStatement();
+				ResultSet rs=st1.executeQuery(query1);
+				while(rs.next())
+				{
+					Employee e=new Employee();
+					 e.setEmpid(rs.getString(1));
+			         e.setEmpname(rs.getString(2));
+			         e.setAddress(rs.getString(3));
+			         e.setEmpdob(rs.getString(4));
+			        
+			         e.setEmpcontact(rs.getLong(5));
+			         e.setUsername(rs.getString(6));
+			         e.setPassword(rs.getString(7));
+			         e.setEmpmail(rs.getString(8));
+			         e.setEmpbranch_id(rs.getInt(9));
+				     employees.add(e);
+			} 
+			}catch (SQLException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+			
+			
 			return employees;
 		}
 		
