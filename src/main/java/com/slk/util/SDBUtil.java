@@ -34,7 +34,7 @@ private static Connection connection = null;
                String password ="1234";
 		     Class.forName(driver);
                 connection = DriverManager.getConnection(url, user, password);
-            } catch (SQLException e) {
+            } catch (SQLException |  ClassNotFoundException  e) {
                 e.printStackTrace();
             }
             return connection;
