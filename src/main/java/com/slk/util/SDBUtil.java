@@ -32,6 +32,7 @@ private static Connection connection = null;
                String url ="jdbc:mysql://localhost:3306/sapphirebank";
                String user = "root";
                String password ="1234";
+		     Class.forName(driver);
                 connection = DriverManager.getConnection(url, user, password);
             } catch (SQLException e) {
                 e.printStackTrace();
